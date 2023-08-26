@@ -1,4 +1,4 @@
-# DOM Manipulation Example
+# DOM Manipulation
 
 This is a simple web application that demonstrates DOM manipulation using HTML, CSS, and JavaScript. It provides a user interface with five dropdown menus, each of which can change various properties of a target `<div>` element, such as its color, background color, padding, font size, and font weight.
 
