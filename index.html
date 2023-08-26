@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <style>
+        #targetDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            color: black;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation Example</h1>
+
+    <label for="colorDropdown">Color:</label>
+    <select id="colorDropdown">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <label for="backgroundColorDropdown">Background Color:</label>
+    <select id="backgroundColorDropdown">
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightpink">Light Pink</option>
+        <option value="lightyellow">Light Yellow</option>
+    </select>
+
+    <label for="paddingDropdown">Padding:</label>
+    <select id="paddingDropdown">
+        <option value="10px">10px</option>
+        <option value="20px">20px</option>
+        <option value="30px">30px</option>
+        <option value="40px">40px</option>
+    </select>
+
+    <label for="fontSizeDropdown">Font Size:</label>
+    <select id="fontSizeDropdown">
+        <option value="16px">16px</option>
+        <option value="20px">20px</option>
+        <option value="24px">24px</option>
+        <option value="28px">28px</option>
+    </select>
+
+    <label for="fontWeightDropdown">Font Weight:</label>
+    <select id="fontWeightDropdown">
+        <option value="normal">Normal</option>
+        <option value="bold">Bold</option>
+    </select>
+
+    <div id="targetDiv">This is a target div.</div>
+
+    <script>
+        function updateStyle() {
+            const targetDiv = document.getElementById("targetDiv");
+            const color = document.getElementById("colorDropdown").value;
+            const backgroundColor = document.getElementById("backgroundColorDropdown").value;
+            const padding = document.getElementById("paddingDropdown").value;
+            const fontSize = document.getElementById("fontSizeDropdown").value;
+            const fontWeight = document.getElementById("fontWeightDropdown").value;
+
+            targetDiv.style.color = color;
+            targetDiv.style.backgroundColor = backgroundColor;
+            targetDiv.style.padding = padding;
+            targetDiv.style.fontSize = fontSize;
+            targetDiv.style.fontWeight = fontWeight;
+        }
+
+        document.getElementById("colorDropdown").addEventListener("change", updateStyle);
+        document.getElementById("backgroundColorDropdown").addEventListener("change", updateStyle);
+        document.getElementById("paddingDropdown").addEventListener("change", updateStyle);
+        document.getElementById("fontSizeDropdown").addEventListener("change", updateStyle);
+        document.getElementById("fontWeightDropdown").addEventListener("change", updateStyle);
+
+        updateStyle();
+    </script>
+</body>
+</html>
